@@ -1,0 +1,21 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "Boiler Plate Code for Angular JS Projects",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.5",
+    "angular-ui-router": "^1.0.3",
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.4",
+    "morgan": "^1.8.2",
+    "mysql": "^2.13.0",
+    "path": "^0.12.7"
+  }
+}
