@@ -1,12 +1,12 @@
 {
-  "name": "boilerplate",
+  "name": "shipt-coding-challenge",
   "version": "1.0.0",
-  "description": "Boiler Plate Code for Angular JS Projects",
+  "description": "Web-Coding-Challenge for Chris Finney",
   "main": "server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Chris Finney <chrisfinney86@gmail.com> (http://chrisfinney.info)",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.6.5",
@@ -15,7 +15,6 @@
     "cookie-parser": "^1.4.3",
     "express": "^4.15.4",
     "morgan": "^1.8.2",
-    "mysql": "^2.13.0",
     "path": "^0.12.7"
   }
 }
