@@ -1,0 +1,38 @@
+{
+  "name": "my-shipt-coding-challenge",
+  "homepage": "https://github.com/CFin86/my-shipt-coding-challenge",
+  "authors": [
+    "Chris Finney <chrisfinney86@gmail.com>"
+  ],
+  "description": "Web-Coding-Challenge for Chris Finney",
+  "main": "server/index.js",
+  "keywords": [
+    "Shipt",
+    "GitHub",
+    "Chris",
+    "Finney",
+    "Web",
+    "Developer",
+    "Marketing"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.6",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "angular-strap": "2.2.1",
+    "angular-mocks": "1.3.15",
+    "angular-route": "~1.3.15",
+    "express": "^4.15.4",
+    "path": "latest",
+    "router": "latest",
+    "api": "latest"
+  }
+}

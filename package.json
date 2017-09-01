@@ -1,20 +1,38 @@
 {
-  "name": "shipt-coding-challenge",
+  "name": "my-shipt-coding-challenge",
   "version": "1.0.0",
   "description": "Web-Coding-Challenge for Chris Finney",
   "main": "server/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./tests/gulpfile.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CFin86/my-shipt-coding-challenge"
   },
   "author": "Chris Finney <chrisfinney86@gmail.com> (http://chrisfinney.info)",
   "license": "ISC",
-  "dependencies": {
-    "angular": "^1.6.5",
-    "@uirouter/angularjs": "^1.0.3",
-    "body-parser": "^1.17.2",
-    "cookie-parser": "^1.4.3",
-    "express": "^4.15.4",
-    "morgan": "^1.8.2",
-    "path": "^0.12.7"
+  "bugs": {
+    "url": "https://github.com/CFin86/my-shipt-coding-challenge/issues"
+  },
+  "homepage": "#",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-cache": "^0.4.6",
+    "gulp-changed": "^3.1.0",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-notify": "^3.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^8.0.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-usemin": "^0.3.28",
+    "jshint": "^2.9.5",
+    "jshint-stylish": "^2.2.1"
   }
 }
