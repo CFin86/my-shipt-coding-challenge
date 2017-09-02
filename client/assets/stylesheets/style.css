@@ -1,0 +1,36 @@
+/*  
+
+TABLE OF CONTENTS
+    #01 - General and Typography
+    #02 - Header
+    #03 - Main Content
+    #04 - Main Content
+    #05 - Parallax
+    #06 - Food menu
+    #07 - Special offers
+    #08 - Reservation
+    #09 - Chefs
+    #10 - Footer
+    #11 - Responsive styles
+*/
+
+/* ==========================================================================
+    #01. General and Typography 
+========================================================================== */
+body{
+    background-color: rgb(255,83,83);
+    font-family:'proxima-nova', sans-serif;
+    -webkit-font-smoothing:antialiased;
+    -webkit-text-size-adjust:100%;
+}
+/* ==========================================================================
+     #02 - Header
+========================================================================== */
+
+
+/* ==========================================================================
+    #03 - Main Content
+========================================================================== */
+.searchBox{
+    width: 20rem;
+}

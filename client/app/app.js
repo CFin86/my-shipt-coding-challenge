@@ -1,6 +1,7 @@
-var app = angular.module("boiler", ["ui.router", "ngResource", "boiler.services", "boiler.factories"]);
+var app = angular.module("app", ["ui.router", "ngResource", "app.services", "app.factories"]);
 
-app.config(function ($stateProvider, $urlRouterProvider, $locationProvider, $uiViewScrollProvider) {
+app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+    "use strict";
     $locationProvider.html5Mode(true);
     $locationProvider.hashPrefix('!');
     $stateProvider
@@ -8,7 +9,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider, $uiV
             url: '/',
             views: {
                 'content': {
-                    templateUrl: 'views/home.html',
+                    templateUrl: 'app/components/home/homeView.html',
                     controller: 'HomeController'
                 }
             }

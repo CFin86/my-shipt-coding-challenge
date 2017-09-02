@@ -1,0 +1,33 @@
+<h1>Searching the Github User Base's Followers</h1>
+<input type="text" placeholder="Enter a github User's Name" class="searchBox" ng-model="User">
+<br>
+<button type="submit" class="btn btn-default" value="Submit Button" ng-click="getFollowers()">Search</button>
+<button class="btn btn-default">Load More Users Followers</button>
+<div class="container">
+    <div class="row">
+        <div>
+            <h1>{{ githubUser.login }} </h1>
+            <br>
+            <h2>{{ githubUser.followers }}</h2>
+        </div>
+        <div ng-repeat="f in followers">
+            <img ng-src="{{f.avatar_url}}">
+            <br>
+            <h2>{{ f.followers }}</h2>
+        </div>
+        <!-- <div ng-repeat="u in githubUser">
+                <h1>{{ u.login }}   </h1>
+                <br>
+                <h2>{{ u.followers }}</h2>
+            </div> -->
+        <!-- <div>
+                    <h1>{{ githubUser.login }}   </h1>
+                    <br>
+                    <h2>{{ githubUser.followers }}</h2>
+                </div> -->
+    </div>
+
+</div>
+<!-- #rem
+    <div class="col-xs-12">{{githubUser.items["0"].login}}</div>
+<div class="col-xs-12">{{githubUser.items["0"].followers_url}}</div> -->
