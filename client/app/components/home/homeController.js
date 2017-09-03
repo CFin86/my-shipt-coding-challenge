@@ -35,7 +35,7 @@ app.controller("HomeController", ["$scope", "$http", "$state", "$q", function ($
         $http.get("https://api.github.com/users/" + $scope.User + "/followers?page=" + count)
             .then(function (response) {
                 $scope.pagination = response.data;
-                if ($scope.pagination.length < 29) {
+                if ($scope.pagination.length < 28) {
                     count = 1;
                     $scope.loadMore = true;
                     $scope.restart = false;
