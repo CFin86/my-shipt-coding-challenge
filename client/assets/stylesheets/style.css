@@ -31,7 +31,6 @@ body {
     -o-background-size: cover;
     background-size: cover;
     color: #333333;
-    width: 100%;
 }
 
 
@@ -221,5 +220,8 @@ img.img-responsive.b {
         max-width: 6.4rem;
         height: auto;
         max-height: 20rem;
+    }
+    .announcement{
+        font-size: 2.4rem;
     }
 }
