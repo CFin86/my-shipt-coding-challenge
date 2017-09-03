@@ -14,17 +14,14 @@ app.controller("HomeController", ["$scope", "$http", "$state", "$q", function ($
         $q.all([githubUser, followers])
             .then(function (resolve) {
                 if (resolve) {
-
+                  
                     $scope.userInfo = false;
                     $scope.githubUser = resolve[0].data;
                     $scope.followers = resolve[1].data;
                     if ($scope.githubUser.followers > 30) {
                         $scope.loadMore = false;
                     } else {
-                        $scope.restart = false;
-                        $scope.startOver = function () {
-                            $state.reload();
-                        };
+                        $scope.loadMore = true;
                     }
                 } else {
                     $scope.available = $scope.available ? false : true;
@@ -38,6 +35,7 @@ app.controller("HomeController", ["$scope", "$http", "$state", "$q", function ($
         $http.get("https://api.github.com/users/" + $scope.User + "/followers?page=" + count)
             .then(function (response) {
                 $scope.pagination = response.data;
+                console.log($scope.pagination);
                 if ($scope.pagination.length < 28) {
                     count = 1;
                     $scope.loadMore = true;
@@ -48,6 +46,4 @@ app.controller("HomeController", ["$scope", "$http", "$state", "$q", function ($
                 }
             });
     };
-
-
 }]);
