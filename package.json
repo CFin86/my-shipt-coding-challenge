@@ -4,6 +4,7 @@
   "description": "Web-Coding-Challenge for Chris Finney",
   "main": "server/index.js",
   "scripts": {
+    "start": "node server/index.js",
     "test": "./tests/gulpfile.js"
   },
   "repository": {
