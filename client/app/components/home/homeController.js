@@ -14,14 +14,17 @@ app.controller("HomeController", ["$scope", "$http", "$state", "$q", function ($
         $q.all([githubUser, followers])
             .then(function (resolve) {
                 if (resolve) {
-                    console.log(resolve)
+
                     $scope.userInfo = false;
                     $scope.githubUser = resolve[0].data;
                     $scope.followers = resolve[1].data;
-                    if ($scope.followers.length > 30) {
+                    if ($scope.githubUser.followers > 30) {
                         $scope.loadMore = false;
                     } else {
-                        $scope.loadMore = true;
+                        $scope.restart = false;
+                        $scope.startOver = function () {
+                            $state.reload();
+                        };
                     }
                 } else {
                     $scope.available = $scope.available ? false : true;
