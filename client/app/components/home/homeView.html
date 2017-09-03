@@ -28,8 +28,6 @@
         <div class="text-center">
             <div ng-hide="userInfo">
                 <h1>The user {{ githubUser.login }} has {{ githubUser.followers }} followers!</h1>
-
-                <!-- <h2>One day I hope to have that many followers!</h2> -->
             </div>
             <div ng-hide="available">
                 <h1>Hey, it looks like the username {{ User }} is available!</h1>
@@ -50,6 +48,10 @@
             <div class="col-xs-12" ng-hide="loadMore">
                     <h2>Wow! {{ githubUser.login }} has even more followers!</h2>
                 <button type="submit" class="btn btn-default" value="Load Button" ng-click="moreFollowers()">Click to Load More Followers!</button>
+            </div>
+            <div class="col-xs-12" ng-hide="restart">
+                    <h2>That's the end of {{ githubUser.login }}'s followers!</h2>
+                <button type="submit" class="btn btn-default" value="Load Button" ng-click="startOver()">Start Over!</button>
             </div>
         </div>
     </div>

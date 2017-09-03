@@ -1,17 +1,18 @@
-app.controller('HomeController', ["$scope", "$http", "$state", "$q", function ($scope, $http, $state, $q) {
+app.controller("HomeController", ["$scope", "$http", "$state", "$q", function ($scope, $http, $state, $q) {
 
-    'use strict';
+    "use strict";
 
     $scope.userInfo = true;
     $scope.available = true;
     $scope.loadMore = true;
+    $scope.restart = true;
 
     $scope.search = function () {
         var count = 1;
         var githubUser = $http.get("https://api.github.com/users/" + $scope.User),
             followers = $http.get("https://api.github.com/users/" + $scope.User + "/followers");
         $q.all([githubUser, followers])
-            .then(function (resolve, reject) {
+            .then(function (resolve) {
                 if (resolve) {
                     console.log(resolve)
                     $scope.userInfo = false;
@@ -22,8 +23,7 @@ app.controller('HomeController', ["$scope", "$http", "$state", "$q", function ($
                     } else {
                         $scope.loadMore = true;
                     }
-                } else (reject) => {
-                    // console.log(reject);
+                } else {
                     $scope.available = $scope.available ? false : true;
                 }
             });
@@ -38,8 +38,10 @@ app.controller('HomeController', ["$scope", "$http", "$state", "$q", function ($
                 if ($scope.pagination.length < 29) {
                     count = 1;
                     $scope.loadMore = true;
-                    $scope.search = function () {
-                        $state.reload();}
+                    $scope.restart = false;
+                    $scope.startOver = function () {
+                        $state.reload();
+                    };
                 }
             });
     };
