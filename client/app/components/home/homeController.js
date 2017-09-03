@@ -18,7 +18,7 @@ app.controller("HomeController", ["$scope", "$http", "$state", "$q", function ($
                     $scope.userInfo = false;
                     $scope.githubUser = resolve[0].data;
                     $scope.followers = resolve[1].data;
-                    if ($scope.followers.length > 29) {
+                    if ($scope.followers.length > 30) {
                         $scope.loadMore = false;
                     } else {
                         $scope.loadMore = true;
