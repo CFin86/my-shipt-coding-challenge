@@ -8,9 +8,15 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
         .state('home', {
             url: '/',
             views: {
+                'header': {
+                    templateUrl: 'app/components/core/header/headerView.html'
+                },
                 'content': {
                     templateUrl: 'app/components/home/homeView.html',
                     controller: 'HomeController'
+                },
+                'footer': {
+                    templateUrl: 'app/components/core/footer/footerView.html'
                 }
             }
         });

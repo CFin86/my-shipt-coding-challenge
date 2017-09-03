@@ -2,35 +2,214 @@
 
 TABLE OF CONTENTS
     #01 - General and Typography
-    #02 - Header
-    #03 - Main Content
-    #04 - Main Content
-    #05 - Parallax
-    #06 - Food menu
-    #07 - Special offers
-    #08 - Reservation
-    #09 - Chefs
-    #10 - Footer
-    #11 - Responsive styles
+    #02 - Navbar
+    #03 - Jumbotron
+    #04 - Container Main
+    #05 - Footer
+    #06 - Responsive styles
+        #06.1 - Mobile Device
+             #06.1.1 - Jumbotron
 */
+
 
 /* ==========================================================================
     #01. General and Typography 
 ========================================================================== */
-body{
-    background-color: rgb(255,83,83);
-    font-family:'proxima-nova', sans-serif;
-    -webkit-font-smoothing:antialiased;
-    -webkit-text-size-adjust:100%;
+
+body {
+    background-color: #fefefe;
+    font-family: 'proxima-nova', sans-serif;
+    border: 1px solid transparent;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    color: #333333;
+}
+
+
+/* ==========================================================================
+     #02 - Navbar
+========================================================================== */
+
+.navbar {
+    border-radius: 0px;
+    margin-bottom: 0px;
+    font-weight: 800;
+    box-shadow: 0 1px 2px #C3C3C3;
+    -webkit-box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
+    -moz-box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
+    box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
+}
+
+.navbar-brand {
+    background: url("/../assets/img/logo.png") center / cover no-repeat;
+    background-origin: content-box;
+    width: 58px;
+    padding: 0px;
+    margin: 2px 15px 3px !important;
+    border-radius: 15px;
+}
+
+.navbar-nav>li>a:hover {
+    background-color: rgb(255, 83, 83) !important;
+    color: #ffffff !important;
+}
+
+
+/* ==========================================================================
+    #03 - Jumbotron
+========================================================================== */
+
+.jumbotron {
+    /* padding-top: 12rem; */
+    background: url("/../assets/img/github.jpg")no-repeat center bottom fixed;
+    width: 100%;
+    box-shadow: 0 1px 2px #C3C3C3;
+    -webkit-box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
+    -moz-box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
+    box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
+    /* padding-bottom: 6rem !important; */
+}
+
+.start-box {
+    margin-top: 55px;
+    background: #F7F7F7;
+    width: 37rem;
+    height: 25rem;
+    float: right;
+    text-align: center;
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+.start-box h1 {
+    font-weight: bold;
+    font-size: 4.3rem;
+    line-height: 1.03;
+}
+
+.start-box h1 strong {
+    color: rgb(255, 83, 83);
+}
+
+.img-responsive.a {
+    border-radius: 15px;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 6.4rem;
+    height: auto;
+    max-height: 20rem;
+}
+
+
+/* ==========================================================================
+    #04 - Container Main
+========================================================================== */
+
+.searchBox {
+    width: 20rem;
+    margin-bottom: .5rem;
+}
+
+.img-wrapper {
+    width: 100%;
+    max-width: 20rem;
+    height: auto;
+    max-height: 20rem;
+    border-radius: 100%;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+}
+
+img.img-responsive.b {
+    width: 100%;
+    max-width: 20rem;
+    height: auto;
+    max-height: 20rem;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+    -webkit-box-shadow: 0 10px 6px -6px #999;
+    -moz-box-shadow: 0 10px 6px -6px #999;
+    box-shadow: 0 10px 6px -6px #999;
+}
+
+#main h2 {
+    margin-bottom: .5rem;
+}
+
+#main h3 {
+    margin-top: .5rem;
+}
+
+
+/* ==========================================================================
+    #05 - Footer
+========================================================================== */
+
+.icon {
+    margin-top: 2.5rem;
+    width: auto;
+    height: 4rem;
+    border-radius: 4px;
+}
+
+.navbar-absolute-bottom {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    margin-top: 12rem!important;
+    bottom: -3rem !important;
 }
 /* ==========================================================================
-     #02 - Header
+    #06 - Responsive Style
 ========================================================================== */
 
 
-/* ==========================================================================
-    #03 - Main Content
-========================================================================== */
-.searchBox{
-    width: 20rem;
+/* ===========
+    #06.1 - Mobile device 
+=============== */
+
+@media (max-width: 599px) {
+/* ===============
+    #06.1.1 - Jumbotron
+=================== */
+    .start-box {
+        margin-top: 55px;
+        background: #F7F7F7;
+        color: black;
+        width: 25rem;
+        height: 20rem;
+        float: none;
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        border-radius: 5px;
+        /* opacity: .95; */
+    }
+    .start-box h1 {
+        font-weight: 600;
+        padding: 1.5rem 1.5rem 0;
+        font-size: 3.1rem;
+    }
+    .logo-wrapper {
+        border-radius: 10px;
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 6.4rem;
+        height: auto;
+        max-height: 20rem;
+    }
 }
