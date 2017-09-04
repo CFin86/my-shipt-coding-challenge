@@ -188,10 +188,13 @@ img.img-responsive.b {
     .navbar-brand {
         background: url("/../assets/img/logo.png") center / cover no-repeat;
         background-origin: content-box;
-        width: 25px;
+        width: 58px;
         padding: 0px;
         margin: 2px 15px 3px !important;
         border-radius: 15px;
+    }
+    .navbar-header{
+        margin: 0 !important;
     }
 /* ===============
     #06.1.1 - Jumbotron
