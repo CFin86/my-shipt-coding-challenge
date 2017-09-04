@@ -35,13 +35,13 @@
                 <h1>Hey, it looks like the username {{ User }} is available!</h1>
                 <h2><a href="https://github.com/join?source=header-home">You should create an account!</a></h2>
             </div>
-            <div class="col-sm-2 col-xs-4" ng-repeat="f in followers">
+            <div class="col-sm-3 col-xs-4 text-center" ng-repeat="f in followers">
                 <div class="img-wrapper">
                     <img ng-src="{{f.avatar_url}}" class="img-responsive b">
                 </div>
             </div>
 
-            <div class="col-sm-2 col-xs-4" ng-repeat="p in pagination">
+            <div class="col-sm-3 col-xs-4" ng-repeat="p in pagination">
                 <div class="img-wrapper">
                     <img ng-src="{{p.avatar_url}}" class="img-responsive b">
                 </div>
