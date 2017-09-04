@@ -19,9 +19,11 @@
         <h2>To get started, simply type a Github User's Login name.</h2>
         <h3>Here's a few to try if you need some inpiration:</h3>
         <h4>CFin86, torvalds, MissyMelissa, erickok, or indiesquidge</h4>
-        <input type="text" placeholder="Enter a github User's Name" class="searchBox" ng-model="User">
+        <form>
+        <input type="text" autocorrect="off" placeholder="Enter a github User's Name" class="searchBox" ng-model="User">
         <br>
-        <button type="submit" class="btn btn-default" value="Submit Button" ng-click="search()">Search</button>
+        <button type="submit" class="btn btn-default" value="Search Button" ng-click="search()">Search</button>
+        </form>
     </div>
 
     <div class="row">
@@ -33,25 +35,32 @@
                 <h1>Hey, it looks like the username {{ User }} is available!</h1>
                 <h2><a href="https://github.com/join?source=header-home">You should create an account!</a></h2>
             </div>
-            <div class="col-sm-4" ng-repeat="f in followers">
+            <div class="col-sm-2 col-xs-4" ng-repeat="f in followers">
                 <div class="img-wrapper">
                     <img ng-src="{{f.avatar_url}}" class="img-responsive b">
                 </div>
             </div>
 
-            <div class="col-sm-4" ng-repeat="p in pagination">
+            <div class="col-sm-2 col-xs-4" ng-repeat="p in pagination">
                 <div class="img-wrapper">
                     <img ng-src="{{p.avatar_url}}" class="img-responsive b">
                 </div>
             </div>
             <br>
+         
+              
+            
             <div class="col-xs-12" ng-hide="loadMore">
                     <h2>Wow! {{ githubUser.login }} has even more followers!</h2>
                 <button type="submit" class="btn btn-default" value="Load Button" ng-click="moreFollowers()">Click to Load More Followers!</button>
+                <h3>or</h3>
+                <button type="submit" class="btn btn-default" value="Restart Button" ng-click="startOver()">Start Over!</button>
+                <h2>You have {{ reqs.remaining }} available searches remaining</h2>    
             </div>
             <div class="col-xs-12" ng-hide="restart">
                     <h2>That's the end of {{ githubUser.login }}'s followers!</h2>
-                <button type="submit" class="btn btn-default" value="Load Button" ng-click="startOver()">Start Over!</button>
+                <button type="submit" class="btn btn-default" value="Restart Button" ng-click="startOver()">Start Over!</button>
+                <h2>You have {{ reqs.remaining }} available searches remaining</h2>    
             </div>
         </div>
     </div>
