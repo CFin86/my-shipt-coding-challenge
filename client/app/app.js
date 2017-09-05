@@ -9,14 +9,16 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
             url: '/',
             views: {
                 'header': {
-                    templateUrl: 'app/components/core/header/headerView.html'
+                    templateUrl: 'app/components/core/header/navbarView.html',
+                    controller: 'NavbarController'
                 },
                 'content': {
                     templateUrl: 'app/components/home/homeView.html',
                     controller: 'HomeController'
                 },
                 'footer': {
-                    templateUrl: 'app/components/core/footer/footerView.html'
+                    templateUrl: 'app/components/core/footer/footerView.html',
+                    controller: 'HomeController'
                 }
             }
         });

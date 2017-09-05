@@ -119,6 +119,24 @@ body {
     width: 20rem;
     margin-bottom: .5rem;
 }
+.searchBtn{
+    margin-bottom: 8px
+}
+.loader {
+    position: inherit;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid rgb(255, 83, 83); 
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
 .img-wrapper {
     width: 100%;
@@ -162,8 +180,8 @@ img.img-responsive.b {
 ========================================================================== */
 
 .icon {
-    margin-top: 2.5rem;
-    width: auto;
+    margin: 0 auto;
+    width: 29px;
     height: 4rem;
     border-radius: 4px;
 }
@@ -235,5 +253,19 @@ img.img-responsive.b {
     }
     .announcement{
         font-size: 2.4rem;
+    }
+    img.img-responsive.b {
+        width: 100%;
+        max-width: 10rem;
+        height: auto;
+        max-height: 10rem;
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+        -webkit-box-shadow: 0 10px 6px -6px #999;
+        -moz-box-shadow: 0 10px 6px -6px #999;
+        box-shadow: 0 10px 6px -6px #999;
     }
 }

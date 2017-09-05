@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/CFin86/my-shipt-coding-challenge/issues"
   },
-  "homepage": "#",
+  "homepage": "http://cfin-shipt-challenge.us-east-2.elasticbeanstalk.com/",
   "dependencies": {
     "@uirouter/angularjs": "^1.0.3",
     "angular": "^1.6.5",

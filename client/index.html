@@ -9,6 +9,16 @@
     <link rel="shortcut icon" href="/assets/img/logo.png">
     <title>ShiptHub</title>
 
+    <meta property="og:title" content="{{seo.title}}">
+    <meta property="twitter:title" content="{{seo.title}}">
+    <meta property="og:image" content="assets/img/logo.png">
+    <meta property="twitter:image" content="{{seo.image}}">
+    <meta property="og:url" content="{{seo.url}}">
+    <meta property="twitter:url" content="{{seo.url}}">
+    <meta property="description" content="An Incredible Github Search Service">
+    <meta property="og:description" content="{{seo.description}}">
+    <meta property="twitter:description" content="{{seo.description}}">
+
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
@@ -31,7 +41,8 @@
     
     <script src="./app/components/home/homeController.js"></script>
     <script src="factories.js"></script>
-    <script src="service.js"></script>
+    <script src="./app/shared/SEOService.js"></script>
+    <script src="./app/components/core/header/navbarController.js"></script>
 </body>
 
 </html>
