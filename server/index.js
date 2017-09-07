@@ -8,7 +8,7 @@ var express = require('express'),
     clientPath = path.join(__dirname, '../client');
 
 
-app.use('/static', express.static(path.join(__dirname, '../client')))
+app.use('/static', express.static(path.join(__dirname, '../client')));
 app.use(prerender.set('prerenderToken', 'Y2ljUX08lEV2mHIMOnxu'));
 
 
