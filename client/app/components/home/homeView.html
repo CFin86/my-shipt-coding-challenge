@@ -20,6 +20,13 @@
     <div class="col-xs-12 text-center">
         <div class="row">
             <h2>To get started, simply type a Github User's Login name.</h2>
+            <form>
+                <input type="text" autocorrect="off" placeholder="Enter a github User's Name" class="searchBox" ng-model="inputValue">
+                <br>
+                <button type="submit" class="btn btn-default searchBtn" value="Search Button" ng-click="search(inputValue)">Search</button>
+                <div class="loader" ng-hide="loadingWheel">
+                </div>
+            </form>
             <h3>Here's a few to try if you need some inpiration:</h3>
             <div ui-view="profileCard"></div>
             <div ui-view="mobileCard"></div>
@@ -27,20 +34,15 @@
     </div>
 
     <div class="col-xs-12 text-center">
-        <form>
-            <input type="text" autocorrect="off" placeholder="Enter a github User's Name" class="searchBox" ng-model="inputValue">
-            <br>
-            <button type="submit" class="btn btn-default searchBtn" value="Search Button" ng-click="search(inputValue)">Search</button>
-        </form>
-        <div class="loader" ng-hide="loadingWheel">
-        </div>
+       
+     
     </div>
 
     <div class="row">
         <div class="col-xs-12 text-center">
 
             <div ng-hide="uNameAvailable">
-                <h1>Hey, it looks like the username {{ inputValue }} is available!</h1>
+                <h1 class="announcement">Hey, it looks like the username {{ inputValue }} is available!</h1>
                 <h2><a href="https://github.com/join?source=header-home">You should create an account!</a></h2>
             </div>
             <div ng-hide="userInfo">

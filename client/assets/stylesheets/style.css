@@ -14,14 +14,15 @@ TABLE OF CONTENTS
         #06.2 - X-Large displays 
 */
 
+
 /* ==========================================================================
     #01. General and Typography 
 ========================================================================== */
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Oswald:400);
 
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Oswald:400);
 body {
-    background: rgba(255,255,255,0.8);
-    font-family: 'proxima-nova', sans-serif;
+    background: rgba(255, 255, 255, 0.8);
+    font-family: "Oswald", "Arial";
     border: 1px solid transparent;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
@@ -72,7 +73,7 @@ body {
 
 .jumbotron {
     background: url("/../assets/img/github.jpg")no-repeat center center;
-    background-size:cover;
+    background-size: cover;
     max-width: 100%;
     box-shadow: 0 1px 2px #C3C3C3;
     -webkit-box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
@@ -83,6 +84,7 @@ body {
 .start-box {
     margin-top: 55px;
     background: #F7F7F7;
+    font-family: 'proxima-nova', sans-serif;
     width: 37rem;
     height: 25rem;
     float: right;
@@ -122,13 +124,15 @@ body {
     width: 20rem;
     margin-bottom: .5rem;
 }
-.searchBtn{
+
+.searchBtn {
     margin-bottom: 8px
 }
+
 .loader {
     position: inherit;
     border: 2px solid #f3f3f3;
-    border-top: 2px solid rgb(255, 83, 83); 
+    border-top: 2px solid rgb(255, 83, 83);
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -137,8 +141,12 @@ body {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .img-wrapper {
@@ -153,24 +161,26 @@ body {
     margin-right: auto;
     margin-bottom: 1.5rem;
 }
+
 #users.ng-move,
 #users.ng-enter,
 #users.ng-leave {
-  -webkit-transition:all linear 0.5s;
-  transition:all linear 0.5s;
+    -webkit-transition: all linear 0.5s;
+    transition: all linear 0.5s;
 }
 
 #users.ng-leave.ng-leave-active,
 #users.ng-move,
 #users.ng-enter {
-  opacity:0;
+    opacity: 0;
 }
 
 #users.ng-leave,
 #users.ng-move.ng-move-active,
 #users.ng-enter.ng-enter-active {
-  opacity:1;
+    opacity: 1;
 }
+
 img.img-responsive.b {
     width: 100%;
     max-width: 15rem;
@@ -195,213 +205,252 @@ img.img-responsive.b {
     font-family: "Oswald", "Arial";
     margin: .5rem 0 4.5rem;
 }
-#orh3{
+
+#orh3 {
     margin-bottom: 2.5rem !important;
 }
+
+
 /* ==========================================================================
     #04.1 - Suggested Github Users 
 ========================================================================== */
 
 .profile {
-  width: 16rem;
-  margin: 0rem 1rem 4rem 1rem;
-  background: radial-gradient(ellipse at bottom, #8d93a0 0%, #404149 100%);
-  border-radius: 0.2rem;
-  padding: 1rem;
-  color: #FFF;
+    width: 16rem;
+    margin: 0rem 1rem 4rem 1rem;
+    background: radial-gradient(ellipse at bottom, #8d93a0 0%, #404149 100%);
+    border-radius: 0.2rem;
+    padding: 1rem;
+    color: #FFF;
 }
+
 .name {
-  font-family: "Oswald", "Arial";
-  font-size: 1.7rem;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 0.1rem;
-  margin-bottom: 2px;
+    font-family: "Oswald", "Arial";
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    margin-bottom: 2px;
 }
-.userName{
+
+.userName {
     font-family: "Oswald", "Arial";
     font-size: 1.7rem;
     text-transform: uppercase;
     margin-bottom: 2px;
 }
+
 .info {
-  font-family: "Roboto Condensed", "Arial";
-  font-size: 1.35rem;
-  margin-bottom: 4px;
+    font-family: "Roboto Condensed", "Arial";
+    font-size: 1.35rem;
+    margin-bottom: 4px;
 }
+
 #circle {
-  display: block;
-  position: relative;
-  width: 8rem;
-  height: 8rem;
-  margin: -5rem auto 0 auto;
-  text-align: center;
-  overflow: hidden;
-  perspective: 1200px;
+    display: block;
+    position: relative;
+    width: 8rem;
+    height: 8rem;
+    margin: -5rem auto 0 auto;
+    text-align: center;
+    overflow: hidden;
+    perspective: 1200px;
 }
-#circle:hover #circle-flip  {
-  transform: rotateY(180deg);
+
+#circle:hover #circle-flip {
+    transform: rotateY(180deg);
 }
 
 #circle-flip {
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: all 500ms;
-  animation: flip 3s;
-  animation-delay: 0.5s;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 500ms;
+    animation: flip 3s;
+    animation-delay: 0.5s;
 }
-.front, .back, .bottom {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  backface-visibility: hidden;
-}
-#circle .front {
-  background: url("https://avatars1.githubusercontent.com/u/22105265?v=4&u=cb1a48635ebd52e2579171a6384d0e426375fccf&s=400") #DDD;
-  background-size: cover;
-  border-radius: 50%;
-}
-.front1, .back, .bottom {
+
+.front,
+.back,
+.bottom {
     position: absolute;
     height: 100%;
     width: 100%;
     backface-visibility: hidden;
-  }
+}
+
+#circle .front {
+    background: url("https://avatars1.githubusercontent.com/u/22105265?v=4&u=cb1a48635ebd52e2579171a6384d0e426375fccf&s=400") #DDD;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.front1,
+.back,
+.bottom {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+}
+
 #circle .front1 {
     background: url("https://avatars3.githubusercontent.com/u/1024025?v=4&s=460") #DDD;
     background-size: cover;
     border-radius: 50%;
-  }
-  .front2, .back, .bottom {
+}
+
+.front2,
+.back,
+.bottom {
     position: absolute;
     height: 100%;
     width: 100%;
     backface-visibility: hidden;
-  }
+}
+
 #circle .front2 {
     background: url("https://avatars0.githubusercontent.com/u/3409645?v=4&s=460") #DDD;
     background-size: cover;
     border-radius: 50%;
-  }
-  .front3, .back, .bottom {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    backface-visibility: hidden;
-  }
-#circle .front3 {
-    background: url("https://avatars0.githubusercontent.com/u/24797376?v=4&s=460") #DDD;
-    background-size: cover;
-    border-radius: 50%;
-  }
-#circle .back {
-  background: url("/assets/img/search.svg") #FFF;
-  background-size: 35%;
-  background-repeat: no-repeat;
-  background-position: center 35%;
-  line-height: 11rem;
-  color: #666;
-  font-family: "Roboto Condensed", "Arial";
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 0.08rem;
-  border-radius: 50%;
-  transform: rotateY(180deg);
 }
-.front4, .back, .bottom {
+
+.front3,
+.back,
+.bottom {
     position: absolute;
     height: 100%;
     width: 100%;
     backface-visibility: hidden;
-  }
-#circle .front4 {
+}
+
+#circle .front3 {
     background: url("https://avatars3.githubusercontent.com/u/611823?v=4&s=460") #DDD;
     background-size: cover;
     border-radius: 50%;
-  }
-  .front5, .back, .bottom {
+}
+
+#circle .back {
+    background: url("/assets/img/search.svg") #FFF;
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: center 35%;
+    line-height: 11rem;
+    color: #666;
+    font-family: "Roboto Condensed", "Arial";
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.08rem;
+    border-radius: 50%;
+    transform: rotateY(180deg);
+}
+
+.front4,
+.back,
+.bottom {
     position: absolute;
     height: 100%;
     width: 100%;
     backface-visibility: hidden;
-  }
+}
+
+#circle .front4 {
+    background: url("https://avatars0.githubusercontent.com/u/24797376?v=4&s=460") #DDD;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.front5,
+.back,
+.bottom {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+}
+
 #circle .front5 {
     background: url("https://avatars3.githubusercontent.com/u/345555?v=4&s=460") #DDD;
     background-size: cover;
     border-radius: 50%;
-  }
+}
+
 #circle .back {
-  background: url("/assets/img/search.svg") #FFF;
-  background-size: 35%;
-  background-repeat: no-repeat;
-  background-position: center 35%;
-  line-height: 11rem;
-  color: #666;
-  font-family: "Roboto Condensed", "Arial";
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 0.08rem;
-  border-radius: 50%;
-  transform: rotateY(180deg);
+    background: url("/assets/img/search.svg") #FFF;
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: center 35%;
+    line-height: 11rem;
+    color: #666;
+    font-family: "Roboto Condensed", "Arial";
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.08rem;
+    border-radius: 50%;
+    transform: rotateY(180deg);
 }
 
 .button {
-  display: block;
-  height: 3.5rem;
-  width: 13rem;
-  margin: 0 auto 1.4rem auto;
-  transform-style: preserve-3d;
-  transform-origin: 50% 25px -25px; 
-  transition: all 300ms;
-  animation: underflip 3s;
-  animation-delay: 4s;
+    display: block;
+    height: 3.5rem;
+    width: 13rem;
+    margin: 0 auto 1.4rem auto;
+    transform-style: preserve-3d;
+    transform-origin: 50% 25px -25px;
+    transition: all 300ms;
+    animation: underflip 3s;
+    animation-delay: 4s;
 }
+
 .button:hover {
-  transform: rotateX(90deg);
+    transform: rotateX(90deg);
 }
 
 .first.button .front {
-  background: url("/assets/img/ghublogo.png") #FFF;
-  background-size: 80%;
-  background-repeat: no-repeat;
-  background-position: center;
+    background: url("/assets/img/ghublogo.png") #FFF;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
+
 .first.button .bottom {
-  background: rgb(255, 83, 83);
-  white-space: nowrap;
+    background: rgb(255, 83, 83);
+    white-space: nowrap;
 }
+
 .first.button .bottom::after {
-  content: "";
-  width: 1px;
-  height: 100%;
-  vertical-align: middle;
-  display: inline-block;
-  margin-right: -10px;
+    content: "";
+    width: 1px;
+    height: 100%;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: -10px;
 }
+
 .first.button .bottom span {
-  color: #FFF;
-  font-family: "Roboto Condensed", "Arial";
-  font-size: 0.9rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 0.07rem;
-  vertical-align: middle;
-  display: inline-block;
-  white-space: normal;
-  padding: 0.3rem;
+    color: #FFF;
+    font-family: "Roboto Condensed", "Arial";
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.07rem;
+    vertical-align: middle;
+    display: inline-block;
+    white-space: normal;
+    padding: 0.3rem;
 }
+
 .button .bottom {
-  transform: rotateX(-90deg) translateY(25px) translateZ(25px);
+    transform: rotateX(-90deg) translateY(25px) translateZ(25px);
 }
-.mobileProfile{
+
+.mobileProfile {
     display: none;
     visibility: hidden;
 }
-
 
 
 /* ==========================================================================
@@ -415,15 +464,19 @@ img.img-responsive.b {
     margin-top: 12rem!important;
     bottom: -3rem !important;
 }
-.gHubLogo{
+
+.gHubLogo {
     margin-bottom: -.7rem;
 }
-.searchMsg{
+
+.searchMsg {
     font-size: 1.8rem;
 }
+
 .remTime {
     margin-top: -.1rem;
 }
+
 .icon {
     margin: 0 auto;
     width: 29px;
@@ -450,15 +503,15 @@ img.img-responsive.b {
         margin: 2px 15px 3px !important;
         border-radius: 15px;
     }
-    .navbar-header{
+    .navbar-header {
         margin: 0 !important;
     }
-/* ===============
+    /* ===============
     #06.1.1 - Jumbotron
 =================== */
-.jumbotron{
-    padding:3rem 0 12rem !important;
-}
+    .jumbotron {
+        padding: 3rem 0 12rem !important;
+    }
     .start-box {
         margin-top: 55px;
         background: #F7F7F7;
@@ -490,7 +543,7 @@ img.img-responsive.b {
         height: auto;
         max-height: 20rem;
     }
-    .announcement{
+    .announcement {
         font-size: 2.4rem;
     }
     img.img-responsive.b {
@@ -507,160 +560,162 @@ img.img-responsive.b {
         -moz-box-shadow: 0 10px 6px -6px #999;
         box-shadow: 0 10px 6px -6px #999;
     }
-/* ===============
+    /* ===============
     #06.1.2 - mobile profile card
 =================== */
-#main h3{
-    margin-bottom: 20px;
-}
-.mobileProfile {
-    display: block;
-    visibility: visible !important;
-    clear: both;
-    float: none;
-    position: relative;
-    max-width: 36.4rem;
-    min-width: 23rem;
-    margin: 0 auto;
-    background: radial-gradient(ellipse at bottom, #8d93a0 0%, #404149 100%);
-    border-radius: 10rem 0.5rem 0.5rem 10rem;
-    padding: 0rem;
-    color: #FFF;
-  }
-  .name {
-    font-family: "Oswald", "Arial";
-    font-size: 1.7rem;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 0.1rem;
-    margin-bottom: 2px;
-  }
-  
-  .info {
-    font-family: "Roboto Condensed", "Arial";
-    font-size: 1.35rem;
-    padding:0 5px 1rem 0;
-    margin-left: 7rem;
-    line-height: 1.1;
-  }
-  .mblCircle {
-    float: left;
-    display: block;
-    position: relative;
-    width: 6.4rem;
-    height: 6.4rem;
-    margin: 0 auto 0 auto;
-    text-align: center;
-    overflow: hidden;
-    perspective: 1200px;
-  }
-  .circle:hover #circle-flip {
-    transform: rotateY(180deg);
-  }
- 
-  .circle-flip {
-    width: 100%;
-    height: 100%;
-
-  }
-  .front, .back, .bottom {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    backface-visibility: hidden;
-  }
-  .mblCircle .front {
-    background: url("https://avatars1.githubusercontent.com/u/22105265?v=4&u=cb1a48635ebd52e2579171a6384d0e426375fccf&s=400") #DDD;
-    background-size: cover;
-    border-radius: 50%;
-  }
-  .mblCircle .back {
-    background: url("/assets/img/search.svg") #FFF;
-    background-size: 35%;
-    background-repeat: no-repeat;
-    background-position: center 35%;
-    line-height: 11rem;
-    color: #666;
-    font-family: "Roboto Condensed", "Arial";
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 0.08rem;
-    border-radius: 50%;
-  }
-  
-  .first.button .front {
-    background: url("/assets/img/ghublogo.png") #FFF;
-    background-size: 80%;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .first.button .bottom {
-    background: rgb(255, 83, 83);
-    white-space: nowrap;
-  }
-  
-  .first.button .bottom span {
-    color: #FFF;
-    font-family: "Roboto Condensed", "Arial";
-    font-size: 0.9rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 0.07rem;
-    vertical-align: middle;
-    display: inline-block;
-    white-space: normal;
-    padding: 0.3rem;
-  }
-  .front1, .back, .bottom {
-    position: absolute;
-    float: left;
-    height: 100%;
-    width: 100%;
-    backface-visibility: hidden;
-  }
-.mblCircle .front1 {
-    background: url("https://avatars3.githubusercontent.com/u/1024025?v=4&s=460") #DDD;
-    background-size: cover;
-    border-radius: 50%;
-  }
-  .front2, .back, .bottom {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    backface-visibility: hidden;
-  }
-  .mblCircle .front2 {
-    background: url("https://avatars0.githubusercontent.com/u/3409645?v=4&s=460") #DDD;
-    background-size: cover;
-    border-radius: 50%;
-  }
-  .front3, .back, .bottom {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    backface-visibility: hidden;
-  }
-.mblCircle .front3 {
-    background: url("https://avatars0.githubusercontent.com/u/24797376?v=4&s=460") #DDD;
-    background-size: cover;
-    border-radius: 50%;
-  }
-  
-/* ===============
+    #main h3 {
+        margin-bottom: 20px;
+    }
+    .mobileProfile {
+        display: block;
+        visibility: visible !important;
+        clear: both;
+        float: none;
+        position: relative;
+        max-width: 36.4rem;
+        min-width: 23rem;
+        margin: 0 auto;
+        background: radial-gradient(ellipse at bottom, #8d93a0 0%, #404149 100%);
+        border-radius: 10rem 0.5rem 0.5rem 10rem;
+        padding: 0rem;
+        color: #FFF;
+    }
+    .name {
+        font-family: "Oswald", "Arial";
+        font-size: 1.7rem;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 0.1rem;
+        margin-bottom: 2px;
+    }
+    .info {
+        font-family: "Roboto Condensed", "Arial";
+        font-size: 1.35rem;
+        padding: 0 5px 1rem 0;
+        margin-left: 7rem;
+        line-height: 1.1;
+    }
+    .mblCircle {
+        float: left;
+        display: block;
+        position: relative;
+        width: 6.4rem;
+        height: 6.4rem;
+        margin: 0 auto 0 auto;
+        text-align: center;
+        overflow: hidden;
+        perspective: 1200px;
+    }
+    .circle:hover #circle-flip {
+        transform: rotateY(180deg);
+    }
+    .circle-flip {
+        width: 100%;
+        height: 100%;
+    }
+    .front,
+    .back,
+    .bottom {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        backface-visibility: hidden;
+    }
+    .mblCircle .front {
+        background: url("https://avatars1.githubusercontent.com/u/22105265?v=4&u=cb1a48635ebd52e2579171a6384d0e426375fccf&s=400") #DDD;
+        background-size: cover;
+        border-radius: 50%;
+    }
+    .mblCircle .back {
+        background: url("/assets/img/search.svg") #FFF;
+        background-size: 35%;
+        background-repeat: no-repeat;
+        background-position: center 35%;
+        line-height: 11rem;
+        color: #666;
+        font-family: "Roboto Condensed", "Arial";
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 0.08rem;
+        border-radius: 50%;
+    }
+    .first.button .front {
+        background: url("/assets/img/ghublogo.png") #FFF;
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .first.button .bottom {
+        background: rgb(255, 83, 83);
+        white-space: nowrap;
+    }
+    .first.button .bottom span {
+        color: #FFF;
+        font-family: "Roboto Condensed", "Arial";
+        font-size: 0.9rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 0.07rem;
+        vertical-align: middle;
+        display: inline-block;
+        white-space: normal;
+        padding: 0.3rem;
+    }
+    .front1,
+    .back,
+    .bottom {
+        position: absolute;
+        float: left;
+        height: 100%;
+        width: 100%;
+        backface-visibility: hidden;
+    }
+    .mblCircle .front1 {
+        background: url("https://avatars3.githubusercontent.com/u/1024025?v=4&s=460") #DDD;
+        background-size: cover;
+        border-radius: 50%;
+    }
+    .front2,
+    .back,
+    .bottom {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        backface-visibility: hidden;
+    }
+    .mblCircle .front2 {
+        background: url("https://avatars0.githubusercontent.com/u/3409645?v=4&s=460") #DDD;
+        background-size: cover;
+        border-radius: 50%;
+    }
+    .front3,
+    .back,
+    .bottom {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        backface-visibility: hidden;
+    }
+    .mblCircle .front3 {
+        background: url("https://avatars3.githubusercontent.com/u/611823?v=4&s=460") #DDD;
+        background-size: cover;
+        border-radius: 50%;
+    }
+    /* ===============
     #06.1.3 - Footer
 =================== */
-.gHubLogo{
-    padding-bottom: 0;
-    height: 40px;
-}
-.searchMsg{
-    margin-top: 2px;
-    font-size: 1.8rem;
-    line-height: 1.2;
-}
-.remTime {
-    margin-top: 0.01rem;
-}
+    .gHubLogo {
+        padding-bottom: 0;
+        height: 40px;
+    }
+    .searchMsg {
+        margin-top: 2px;
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    .remTime {
+        margin-top: 0.01rem;
+    }
 }

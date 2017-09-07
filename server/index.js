@@ -1,21 +1,21 @@
-var express = require('express'),
+var express = require("express"),
     app = express(),
     routeMW = require("./middleware/route.mw.js"),
-    bodyParser = require('body-parser'),
-    path = require('path'),
-    prerender = require('prerender-node'),
-    api = require('./config/api');
-    clientPath = path.join(__dirname, '../client');
+    bodyParser = require("body-parser"),
+    path = require("path"),
+    prerender = require("prerender-node"),
+    api = require("./config/api");
+    clientPath = path.join(__dirname, "../client");
 
 
-app.use('/static', express.static(path.join(__dirname, '../client')));
-app.use(prerender.set('prerenderToken', 'Y2ljUX08lEV2mHIMOnxu'));
+app.use("/static", express.static(path.join(__dirname, "../client")));
+app.use(prerender.set("prerenderToken", "Y2ljUX08lEV2mHIMOnxu"));
 
 
 app.use(express.static(clientPath));
 app.use(bodyParser.json());
 
-app.use('/config/api', api);
+app.use("/config/api", api);
 
 app.get("*", function (req, res, next) {
     "use strict";
