@@ -4,7 +4,7 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     path = require('path'),
     prerender = require('prerender-node'),
-    api = require('./api');
+    api = require('./config/api');
     clientPath = path.join(__dirname, '../client');
 
 
