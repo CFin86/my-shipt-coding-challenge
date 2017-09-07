@@ -5,7 +5,7 @@ var express = require('express'),
     baseURL = "https://api.github.com/";
 
 router.route('/')
-    .get(function (req, res, next) {
+    .get(function (request, res, next) {
         request({
             uri: baseURL + "rate_limit",
             headers: {
