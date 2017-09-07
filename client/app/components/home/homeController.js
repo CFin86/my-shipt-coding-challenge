@@ -54,7 +54,6 @@ app.controller("HomeController", ["$scope", "$http", "$state", "$q",
                 $scope.loadingWheel2 = true;
                 $scope.nextPayload = false;
                 $scope.pagination = resolve.data;
-                    // $scope.reqs = resolve[1].data.rate;
                 if ($scope.pagination.length < 30) {
                     pageCount = 1;
                     $scope.loadMore = true;
