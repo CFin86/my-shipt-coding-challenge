@@ -1,5 +1,4 @@
 # Web Coding Challenge for Shipt by Chris Finney
-===========================================
 
 This website is hosted on AWS [here.](http://cfin-shipt-challenge.us-east-2.elasticbeanstalk.com/)
 
