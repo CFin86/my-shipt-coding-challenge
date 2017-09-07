@@ -1,5 +1,5 @@
 var express = require("express"),
-    gitHubCtrl = require("../controllers/githublimit.ctrl.js"),
+    gitHubCtrl = require("/controllers/githubLimit.ctrl.js"),
     router = express.Router();
 
 router.use('/githublimit', gitHubCtrl);
