@@ -1,11 +1,20 @@
 <div class="navbar navbar-absolute-bottom">
+        
         <div class="rowBottom" align="center">
-           <div class="col-xs-12 col-sm-12">
-                <!-- <h2>You have {{ reqs.remaining }} available searches remaining</h2>     -->
-              <a href="http://chrisfinney.info/">
+                
+                <div class="col-xs-12 col-sm-12">
+                        <img src="/assets/img/ghublogo.png" class="gHubLogo" />
+                </div>
+        
+                <div class="col-xs-12 text-center">
+                        <span class="searchMsg">Limits their searches to 60 requests per hour.</span>
+                        <h4 class="remTime">You have {{ reqs.rate.remaining }} available searches remaining. This will reset at {{ reqs.rate.reset
+                                * 1000 | date:"h:mm a"}}</h4>
+                        <a href="http://chrisfinney.info/">
                  <img class="icon" src="/assets/img/cfIcon.png" alt="builtbyCF"/>
                  <p>Built by CF</p>
               </a>
+                </div>
+
         </div>
-    </div>
 </div>

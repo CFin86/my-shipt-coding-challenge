@@ -1,1 +1,2 @@
-This is a boilerplate code for angularJS 1.6 and ui-router projects
+Web Coding Challenge for Shipt by Chris Finney
+===============================================
