@@ -1,0 +1,4 @@
+export DB_HOST='shipthub.c4ggqnxbdpvu.us-east-2.rds.amazonaws.com';
+export DB_USER='cmfinney';
+export DB_PASS='kuwabara12'
+export DB_NAME='ShiptHub'
