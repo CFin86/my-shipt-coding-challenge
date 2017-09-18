@@ -4,7 +4,7 @@
   "description": "Web-Coding-Challenge for Chris Finney",
   "main": "server/index.js",
   "scripts": {
-    "start": "node server/index.js",
+    "start": "source .variables && node server/index.js",
     "test": "mocha server/tests"
   },
   "repository": {
