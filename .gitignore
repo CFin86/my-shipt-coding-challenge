@@ -1,6 +1,5 @@
 node_modules
 .vscode
-.variables
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
