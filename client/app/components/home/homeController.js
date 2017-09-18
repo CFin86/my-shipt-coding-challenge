@@ -1,8 +1,10 @@
-app.controller("HomeController", ["$scope", "$http", "$state", "$q",
-        function ($scope, $http, $state, $q) {
+app.controller("HomeController", ["$scope", "$http", "$state", "$q", "User",
+        function ($scope, $http, $state, $q, User) {
     "use strict";
-    var pageCount = 1,
-        githubAPI = "https://api.github.com/users/";
+    $scope.User = User.query();
+    console.log($scope.User);
+    var pageCount, githubAPI, githubUser, followers;
+
     //hides most everything in the homeView 
     $scope.userInfo = true;
     $scope.uNameAvailable = true;
@@ -16,11 +18,12 @@ app.controller("HomeController", ["$scope", "$http", "$state", "$q",
 // a  
     $scope.inputValue = null;
     $scope.search = function (User) {
-        $scope.loadingWheel = false;
         pageCount = 1;
-        var githubUser = $http.get(githubAPI + User),
-            followers = $http.get(githubAPI + User + "/followers");
+        githubAPI = "https://api.github.com/users/";
+        githubUser = $http.get(githubAPI + User);
+        followers = $http.get(githubAPI + User + "/followers");
 
+        $scope.loadingWheel = false;
         $q.all([githubUser, followers])
             .then(function (resolve) {
                 if (resolve) {
@@ -33,6 +36,9 @@ app.controller("HomeController", ["$scope", "$http", "$state", "$q",
                     if ($scope.githubUser.followers > 30) {
                         $scope.loadMore = false;
                         $scope.restart = true;
+                    } else {
+                        $scope.loadMore = true;
+                        $scope.restart = false;
                     }
                 }
             }).catch(function () {

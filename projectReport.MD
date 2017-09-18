@@ -31,7 +31,7 @@ Whenever I receive a coding challenge, I usually first solve the problem to have
 ### Things to add in the future
 
 * Better error handling for 403 errors
-* Hosted RDS mySQL database to query for the suggested github users. Perform an ng-repeat, so there would be less lines of code in my html files
+~~Hosted RDS mySQL database to query for the suggested github users. Perform an ng-repeat, so there would be less lines of code in my html files~~
 * OAuth2.0 authentication to remove the limit on 60 requests per hour
 
 ### The challenge of searching 'indiesquidge'

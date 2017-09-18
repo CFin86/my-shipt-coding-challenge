@@ -1,4 +1,4 @@
-var app = angular.module("app", ["ui.router", "ngResource", "app.services", "app.factories"]);
+var app = angular.module("app", ["ui.router", "ngResource", "app.services", "app.factories", "home.factories"]);
 
 app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     "use strict";
