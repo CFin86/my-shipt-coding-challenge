@@ -1,57 +1,11 @@
-
-
-<div class="col-xs-12 text-center mobileProfile" ng-click="search('cfin86')">
-        <a value="cfin86" class="mblCircle">
-                <div class="front">
-                </div>
-        </a>
-        <div>
-                <p class="name">Chris Finney</p>
-                <p class="info">New web developer to the industry and hopeful future Shipt Developer</p>
-        </div>
-</div>
-
-<div class="col-xs-12 text-center mobileProfile" ng-click="search('torvalds')">
-        <a class="mblCircle">
-                <div class="front1">
-                </div>
-        </a>
-        <div>
-                <p class="name">Linus Torvalds</p>
-                <p class="info">Most followers on all of Github, Also built the linux system</p>
-        </div>
-</div>
-
-<div class="col-xs-12 text-center mobileProfile" ng-click="search('indiesquidge')">
-        <a class="mblCircle">
-                <div class="front2">
-                </div>
-        </a>
-        <div>
-                <p class="name">Austin Wood</p>
-                <p class="info">Wrote this coding challenge. Has a very elusive followers base.</p>
-        </div>
-</div>
-
-<div class="col-xs-12 text-center mobileProfile" ng-click="search('spoletto')">
-        <a class="mblCircle">
-                <div class="front3">
-                </div>
-        </a>
-        <div>
-                <p class="name">Stephen Poletto</p>
-                <p class="info">This lover of python is a super cool Engineering Manager with Drop Box</p>
-        </div>
-</div>
-
-<!-- TO QUICKLY MAKE ANOTHER CARD -->
-<!-- <div class="col-xs-12 text-center mobileProfile" ng-click="search('#')">
-                <a class="mblCircle">
-                        <div class="front3">
-                        </div>
+<div ng-repeat="u in User | filter:{mobile:true}">
+        <div class="col-xs-12 text-center mobileProfile" ng-click="search(u.username)">
+                <a value="cfin86" class="mblCircle">
+                        <img src="{{ u.image }}" class="front"/>
                 </a>
                 <div>
-                <p class="name">  </p>
-                <p class="info">  </p>
+                        <p class="name">{{ u.name }}</p>
+                        <p class="info">{{ u.description }}</p>
                 </div>
-            </div> -->
+        </div>
+</div>

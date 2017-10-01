@@ -29,15 +29,13 @@
             </form>
             <h3>Here's a few to try if you need some inpiration.</h3>
             <h3 class="mobileH3">Just click on one of the profile cards to search a user.</h3>
-        
+
             <div ui-view="profileCard"></div>
             <div ui-view="mobileCard"></div>
         </div>
     </div>
 
     <div class="col-xs-12 text-center">
-       
-     
     </div>
 
     <div class="row">
@@ -47,16 +45,16 @@
                 <h1 class="announcement">Hey, it looks like the username {{ inputValue }} is available!</h1>
                 <h2><a href="https://github.com/join?source=header-home">You should create an account!</a></h2>
             </div>
+
             <div ng-hide="userInfo">
                 <h1 class="announcement">The user {{ githubUser.login }} has {{ githubUser.followers }} followers!</h1>
-
                 <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 text-center" id="users" ng-repeat="f in followers">
                     <div class="img-wrapper">
                         <img ng-src="{{f.avatar_url}}" class="img-responsive b">
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" ng-hide="nextPayload" ng-repeat="p in pagination">
                 <div class="img-wrapper">
                     <img ng-src="{{p.avatar_url}}" class="img-responsive b">

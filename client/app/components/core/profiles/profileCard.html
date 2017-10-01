@@ -1,168 +1,24 @@
-<div class="col-sm-2 hidden-xs profile">
-    <a ng-click="search('cfin86')" value="cfin86" id="circle">
+<div class="col-sm-2 hidden-xs profile" ng-repeat="u in User">
+    <a ng-click="search(u.username)" id="circle">
         <div id="circle-flip">
             <div class="front">
+            <img src="{{u.image}}" class="front">
             </div>
             <div class="back">
                 Search
             </div>
         </div>
     </a>
-    <p class="name">Chris Finney</p>
-    <p class="userName">CFin86</p>
-    <p class="info">New web developer to the industry and hopeful future Shipt Developer</p>
+    <p class="name">{{u.name}}</p>
+    <p class="userName">{{u.username}}</p>
+    <p class="info">{{u.description}}</p>
     <div class="button-container">
-        <a class="first button" href="https://github.com/cfin86">
+        <a class="first button" href="{{u.link}}">
             <div class="front">
             </div>
             <div class="bottom">
-                <span>Check the cool things I'm doing on Github</span>
+                <span>{{u.githubTitle}}</span>
             </div>
         </a>
     </div>
 </div>
-
-<div class="col-sm-2 hidden-xs profile">
-    <a ng-click="search('torvalds')" id="circle">
-        <div id="circle-flip">
-            <div class="front1">
-            </div>
-            <div class="back">
-                Search
-            </div>
-        </div>
-    </a>
-    <p class="name">Linus Torvalds</p>
-    <p class="userName">torvalds</p>
-    <p class="info">Most followers on all of Github, Also built the linux system </p>
-    <div class="button-container">
-        <a class="first button" href="https://github.com/torvalds">
-            <div class="front">
-            </div>
-            <div class="bottom">
-                <span>Check the cool things they're doing on Github</span>
-            </div>
-        </a>
-    </div>
-</div>
-
-<div class="col-sm-2 hidden-xs profile">
-    <a ng-click="search('indiesquidge')" id="circle">
-        <div id="circle-flip">
-            <div class="front2">
-            </div>
-            <div class="back">
-                Search
-            </div>
-        </div>
-    </a>
-    <p class="name">Austin Woods</p>
-    <p class="userName">indiesquidge</p>
-    <p class="info">Wrote this coding challenge. Has a very elusive followers base.</p>
-    <div class="button-container">
-        <a class="first button" href="https://github.com/indiesquidge">
-            <div class="front">
-            </div>
-            <div class="bottom">
-                <span>Check the cool things they're doing on Github</span>
-            </div>
-        </a>
-    </div>
-</div>
-<div class="col-sm-2 hidden-xs hidden-sm profile">
-    <a ng-click="search('spoletto')" id="circle">
-        <div id="circle-flip">
-            <div class="front3">
-            </div>
-            <div class="back">
-                Search
-            </div>
-        </div>
-    </a>
-    <p class="name">Stephen Poletto</p>
-    <p class="userName">spoletto
-    </p>
-    <p class="info">This lover of python is a super cool Engineering Manager with Drop Box </p>
-    <div class="button-container">
-        <a class="first button" href="https://github.com/spoletto">
-            <div class="front">
-            </div>
-            <div class="bottom">
-                <span>Check the cool things they're doing on Github</span>
-
-            </div>
-        </a>
-    </div>
-</div>
-<div class="col-sm-2 hidden-xs profile">
-    <a ng-click="search('missyMelissa')" id="circle">
-        <div id="circle-flip">
-            <div class="front4">
-            </div>
-            <div class="back">
-                Search
-            </div>
-        </div>
-    </a>
-    <p class="name">Melissa Catt</p>
-    <p class="userName">MissyMelissa</p>
-    <p class="info">Has exactly 30 followers. Cat afficianado from the Netherlands</p>
-    <div class="button-container">
-        <a class="first button" href="https://github.com/MissyMelissa">
-            <div class="front">
-            </div>
-            <div class="bottom">
-                <span>Check the cool things they're doing on Github</span>
-            </div>
-        </a>
-    </div>
-</div>
-
-<div class="col-sm-2 hidden-xs hidden-sm hidden-md profile">
-    <a ng-click="search('aramirez-es')" id="circle">
-        <div id="circle-flip">
-            <div class="front5">
-            </div>
-            <div class="back">
-                Search
-            </div>
-        </div>
-    </a>
-    <p class="name">Alberto Ramírez</p>
-    <p class="userName">aramirez-es</p>
-    <p class="info">This new developer is from Barcelona. He writes some great README's!</p>
-    <div class="button-container">
-        <a href="https://github.com/aramirez-es" class="first button">
-            <div class="front">
-            </div>
-            <div class="bottom">
-                <span>Check the cool things they're doing on Github</span>
-            </div>
-        </a>
-    </div>
-</div>
-
-<!-- TO QUICKLY MAKE ANOTHER CARD -->
-<!-- <div class="col-sm-2 hidden-xs profile">
-    <a ng-click="search('#')" id="circle">
-        <div id="circle-flip">
-            <div class="front">
-            </div>
-            <div class="back">
-              Search
-            </div>
-        </div>
-    </a>
-    <p class="name">  </p>
-    <p class="userName"> </p>
-    <p class="info">  </p>
-    <div class="button-container">
-        <a class="first button" href="#">
-            <div class="front">
-            </div>
-            <div class="bottom"> 
-                <span>Check the cool things theyr're doing on Github</span>
-            </div>
-        </a>
-    </div>
- </div>  -->

@@ -251,9 +251,8 @@ img.img-responsive.b {
     position: relative;
     width: 8rem;
     height: 8rem;
-    margin: -5rem auto 0 auto;
-    text-align: center;
-    overflow: hidden;
+    margin: 0 auto;
+    text-align: left;
     perspective: 1200px;
 }
 
@@ -262,8 +261,10 @@ img.img-responsive.b {
 }
 
 #circle-flip {
+    position: relative;
     width: 100%;
     height: 100%;
+    margin: 0 auto;
     transform-style: preserve-3d;
     transition: all 500ms;
     animation: flip 3s;
@@ -276,108 +277,26 @@ img.img-responsive.b {
     position: absolute;
     height: 100%;
     width: 100%;
+    margin: 0 auto;
     backface-visibility: hidden;
 }
 
 #circle .front {
-    background: url("https://avatars1.githubusercontent.com/u/22105265?v=4&u=cb1a48635ebd52e2579171a6384d0e426375fccf&s=400") #DDD;
     background-size: cover;
     border-radius: 50%;
 }
-
-.front1,
-.back,
-.bottom {
+/* .frontIMG{
+    background-size: cover;
+    border-radius: 50%;
     position: absolute;
     height: 100%;
     width: 100%;
-    backface-visibility: hidden;
-}
-
-#circle .front1 {
-    background: url("https://avatars3.githubusercontent.com/u/1024025?v=4&s=460") #DDD;
-    background-size: cover;
-    border-radius: 50%;
-}
-
-.front2,
-.back,
-.bottom {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    backface-visibility: hidden;
-}
-
-#circle .front2 {
-    background: url("https://avatars0.githubusercontent.com/u/3409645?v=4&s=460") #DDD;
-    background-size: cover;
-    border-radius: 50%;
-}
-
-.front3,
-.back,
-.bottom {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    backface-visibility: hidden;
-}
-
-#circle .front3 {
-    background: url("https://avatars3.githubusercontent.com/u/611823?v=4&s=460") #DDD;
-    background-size: cover;
-    border-radius: 50%;
-}
-
+} */
 #circle .back {
-    background: url("/assets/img/search.svg") #FFF;
-    background-size: 35%;
-    background-repeat: no-repeat;
-    background-position: center 35%;
-    line-height: 11rem;
-    color: #666;
-    font-family: "Roboto Condensed", "Arial";
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 0.08rem;
-    border-radius: 50%;
-    transform: rotateY(180deg);
-}
-
-.front4,
-.back,
-.bottom {
+    display: inline;
     position: absolute;
-    height: 100%;
-    width: 100%;
-    backface-visibility: hidden;
-}
-
-#circle .front4 {
-    background: url("https://avatars0.githubusercontent.com/u/24797376?v=4&s=460") #DDD;
-    background-size: cover;
-    border-radius: 50%;
-}
-
-.front5,
-.back,
-.bottom {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    backface-visibility: hidden;
-}
-
-#circle .front5 {
-    background: url("https://avatars3.githubusercontent.com/u/345555?v=4&s=460") #DDD;
-    background-size: cover;
-    border-radius: 50%;
-}
-
-#circle .back {
     background: url("/assets/img/search.svg") #FFF;
+    margin: 0 auto;
     background-size: 35%;
     background-repeat: no-repeat;
     background-position: center 35%;
@@ -610,9 +529,8 @@ img.img-responsive.b {
         position: relative;
         width: 6.4rem;
         height: 6.4rem;
-        margin: 0 auto 0 auto;
-        text-align: center;
-        overflow: hidden;
+        margin: 0 auto;
+        text-align: left;
         perspective: 1200px;
     }
     .circle:hover #circle-flip {
@@ -631,7 +549,6 @@ img.img-responsive.b {
         backface-visibility: hidden;
     }
     .mblCircle .front {
-        background: url("https://avatars1.githubusercontent.com/u/22105265?v=4&u=cb1a48635ebd52e2579171a6384d0e426375fccf&s=400") #DDD;
         background-size: cover;
         border-radius: 50%;
     }
@@ -672,46 +589,6 @@ img.img-responsive.b {
         white-space: normal;
         padding: 0.3rem;
     }
-    .front1,
-    .back,
-    .bottom {
-        position: absolute;
-        float: left;
-        height: 100%;
-        width: 100%;
-        backface-visibility: hidden;
-    }
-    .mblCircle .front1 {
-        background: url("https://avatars3.githubusercontent.com/u/1024025?v=4&s=460") #DDD;
-        background-size: cover;
-        border-radius: 50%;
-    }
-    .front2,
-    .back,
-    .bottom {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        backface-visibility: hidden;
-    }
-    .mblCircle .front2 {
-        background: url("https://avatars0.githubusercontent.com/u/3409645?v=4&s=460") #DDD;
-        background-size: cover;
-        border-radius: 50%;
-    }
-    .front3,
-    .back,
-    .bottom {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        backface-visibility: hidden;
-    }
-    .mblCircle .front3 {
-        background: url("https://avatars3.githubusercontent.com/u/611823?v=4&s=460") #DDD;
-        background-size: cover;
-        border-radius: 50%;
-    }
     /* ===============
     #06.1.3 - Footer
 =================== */
@@ -727,4 +604,16 @@ img.img-responsive.b {
     .remTime {
         margin-top: 0.01rem;
     }
+}
+@media (max-width: 992px) {
+    .profile:nth-child(5){
+    visibility: hidden;
+    display: none;
+    }
+    }
+@media (max-width: 1200px) {
+.profile:nth-child(6){
+visibility: hidden;
+display: none;
+}
 }

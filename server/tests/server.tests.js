@@ -30,7 +30,7 @@ describe('Node Server', function () {
             done();
         });
     });
-
+//
     it('should respond to API get request with a JSON data that is 234', function (done) {
         request('http://localhost:3000/config/api/githublimit/', function (error, response, data) {
             expect(data.length).to.equal(234);

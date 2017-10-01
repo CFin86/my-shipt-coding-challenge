@@ -4,11 +4,13 @@ var express = require("express"),
     bodyParser = require("body-parser"),
     path = require("path"),
     prerender = require("prerender-node"),
+    logger = require('morgan'),
     api = require("./config/api");
     clientPath = path.join(__dirname, "../client");
 
 
 app.use("/static", express.static(path.join(__dirname, "../client")));
+app.use(logger('dev'));
 app.use(prerender.set("prerenderToken", "Y2ljUX08lEV2mHIMOnxu"));
 
 

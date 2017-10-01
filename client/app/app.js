@@ -17,10 +17,12 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
                     controller: 'HomeController'
                 },
                 'profileCard@home': {
-                    templateUrl: 'app/components/core/profiles/profileCard.html'
+                    templateUrl: 'app/components/core/profiles/profileCard.html',
+                    controller: 'ProfileController'
                 },
                 'mobileCard@home': {
-                    templateUrl: 'app/components/core/profiles/mobileCard.html'
+                    templateUrl: 'app/components/core/profiles/mobileCard.html',
+                    controller: 'ProfileController'
                 },
                 'footer': {
                     templateUrl: 'app/components/core/footer/footerView.html',
