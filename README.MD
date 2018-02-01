@@ -1,6 +1,6 @@
 # Web Coding Challenge for Shipt by Chris Finney
 
-This website is hosted on AWS [here.](http://cfin-shipt-challenge.us-east-2.elasticbeanstalk.com/)
+This website is hosted on github pages [here.](https://cfin86.github.io/ShiptHub/#!/)
 
 If you have cloned this project, I am sure that you are familiar with Nodejs, but just in case you are not here's the documentation to get [started.](https://nodejs.org/en/download/package-manager/)
 
